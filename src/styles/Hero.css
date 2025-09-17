@@ -3,9 +3,10 @@
   min-height: 100vh;
   background-color: #000000;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 60px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 100px 100px 0 100px;
+  gap: 250px; /* Increase this value for greater space between text and mascot */
   overflow: hidden;
 }
 
@@ -18,9 +19,9 @@
   transform: translateX(-50%);
   width: 1000px;       /* Increased size of the circle */
   height: 800px;       /* Increased size of the circle */
-  background: radial-gradient(circle, #307fe2 20%, transparent 70%);
+  background: radial-gradient(circle, #114b93 20%, transparent 70%);
   filter: blur(100px); /* Increased blur for softness */
-  animation: breathe 8s ease-in-out infinite; /* Slower pulse */
+  animation: breathe 10s ease-in-out infinite; /* Slower pulse */
   z-index: 0;
 }
 
@@ -37,24 +38,25 @@
 }
 
 .hero-text {
-  top: 50%;
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-  color: #ffffff;
-  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;   /* Adjust so your text sits on 2 lines max, not 3 */
+  line-height: 1.14;  /* Tighter, if you want lines closer; tweak as needed */
+  gap: 2.3rem;        /* Controls vertical space between large blocks only */
 }
 
 .hero-text h1 {
-  font-size: 4.5rem;
+  font-size: 5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0; /* larger bottom margin for extra air */
 }
 
 /* Container for the text you want to animate */
 .hero-text-h2 {
   font-weight: 700;
-  font-size: 4.5rem;
+  font-size: 5rem;
+  margin-bottom: 1rem;
   background: linear-gradient(
     90deg,
     #1052a4 20%,
@@ -79,32 +81,55 @@
 }
 
 .hero-text p {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #eeeeee;
   font-weight: 400;
-  opacity: 0.8;
-  color: #ffffff;
+  
+}
+
+.hero-text h1,
+.hero-text h2,
+.hero-text p {
+  margin-bottom: 0;    /* Reset browser's default margin */
+  margin-top: 0;
+  line-height: 1.08;   /* Tight and consistent, adjust as needed */
+}
+
+.hero-socials { /* or your button/icon container class */
+  margin-bottom: 3.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .hero-spline {
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: 400px;
+  height: 550px;
   z-index: 1;
 }
+
 
 /* Responsive */
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
-    padding: 40px 20px;
-    text-align: center;
+    padding: 40px 16px !important;
+    gap: 32px;
+    align-items: flex-start;
   }
+  
   .hero-text {
-    max-width: 200%;
-    margin-bottom: 10px;
+    max-width: 100%;
+    gap: 2rem;
+    align-items: flex-start;
   }
+
   .hero-spline {
-    width: 300px;
-    height: 550px;
+    margin-top: 24px;
+    width: 400px;
+    height: 400px;
   }
 }
+
