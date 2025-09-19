@@ -1,23 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/CustomCursor.css';
 
+const HOVERABLE_SELECTORS = 'button, a, [role="button"], .hoverable';
+
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: -100, y: -100 });
   const [ringPosition, setRingPosition] = useState({ x: -100, y: -100 });
+  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     const moveCursor = e => {
       setPosition({ x: e.clientX, y: e.clientY });
+
+      const element = document.elementFromPoint(e.clientX, e.clientY);
+      if (element && element.closest(HOVERABLE_SELECTORS)) {
+        setIsHovering(true);
+      } else {
+        setIsHovering(false);
+      }
     };
 
     window.addEventListener('mousemove', moveCursor);
-
     return () => {
       window.removeEventListener('mousemove', moveCursor);
     };
   }, []);
 
-  // Animate ring to follow the dot with delay
   useEffect(() => {
     let animationFrame;
 
@@ -44,7 +52,7 @@ const CustomCursor = () => {
         style={{ left: `${position.x}px`, top: `${position.y}px` }}
       />
       <div
-        className="cursor-ring"
+        className={`cursor-ring ${isHovering ? 'cursor-ring--hover' : ''}`}
         style={{ left: `${ringPosition.x}px`, top: `${ringPosition.y}px` }}
       />
     </>

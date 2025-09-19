@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="hero-socials">
             <a 
                 className="btn-resume" 
-                href="/path-to-your-resume.pdf" 
+                href="https://drive.google.com/file/d/1sRxUxVcoAw2wkLNfukmOIWHu3KhSOoeV/view?usp=sharing" 
                 download 
                 target="_blank"
                 rel="noopener noreferrer"
