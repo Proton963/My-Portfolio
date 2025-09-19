@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import LoadingScreen from './components/LoadingScreen';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -8,7 +9,19 @@ import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import './styles/App.css';
 
-function App() {
+export default function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 4200); // match your loading animation duration
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <div className="App">
       <Hero />
@@ -21,5 +34,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
