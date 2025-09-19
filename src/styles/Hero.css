@@ -105,6 +105,34 @@
   gap: 1.5rem;
 }
 
+.btn-resume {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 8px 20px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #114b93;
+  border-radius: 100px; /* capsule shape */
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-resume i {
+  font-size: 1.1rem;
+  line-height: 0;
+}
+
+.btn-resume:hover,
+.btn-resume:focus {
+  background-color: #114b93;
+  color: white;
+  outline: none;
+}
+
 .social-btn {
   display: flex;
   align-items: center;
@@ -128,6 +156,7 @@
   box-shadow: 0 0 16px 2px #114b9360 inset;
   outline: none;
 }
+
 
 .hero-spline {
   position: relative;

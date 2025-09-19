@@ -26,6 +26,16 @@ export default function Hero() {
           Software developer by day, AI enthusiast by night.
         </p>
         <div className="hero-socials">
+            <a 
+                className="btn-resume" 
+                href="/path-to-your-resume.pdf" 
+                download 
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download Resume"
+             >
+                <i className="fas fa-download"></i> Resume
+            </a>
             <a className="social-btn" href="https://github.com/Proton963" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <i className="fab fa-github"></i>
             </a>
