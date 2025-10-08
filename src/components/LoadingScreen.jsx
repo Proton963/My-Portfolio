@@ -29,7 +29,7 @@ export default function LoadingScreen() {
   useEffect(() => {
     const interval = setInterval(() => {
       setGreetingIndex(i => 1 - i); // toggle between 0 and 1
-    }, 2000);
+    }, 1500);
     return () => clearInterval(interval);
   }, []);
 

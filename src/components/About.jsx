@@ -1,12 +1,37 @@
 import React from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import TransitionOrb from './TransitionOrb';
+import '../styles/About.css';
 
 const About = () => {
+  const { scrollYProgress } = useScroll();
+  
+  // Change heading color when orb reaches it (around 0.6-0.7 scroll progress)
+  const headingColor = useTransform(
+    scrollYProgress, 
+    [0.24, 0.25], 
+    ['#ffffff', '#1052a4']
+  );
+  
+  const headingGlow = useTransform(
+    scrollYProgress,
+    [0.20, 0.25],
+    ['none', '0 0 40px #1052a4, 0 0 40px #1052a4']
+  );
+
   return (
     <section id="about" className="about">
       <div className="container">
         <div className="section-header">
-          <h2>About Me</h2>
-          <p>Get to know me better</p>
+          <motion.h2 className="about-heading"
+            style={{ 
+              // color: headingColor,
+              textShadow: headingGlow 
+            }}
+          >
+            About Me
+          </motion.h2>
+          {/* <p>Get to know me better</p> */}
         </div>
         
         <div className="about-content">

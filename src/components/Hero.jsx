@@ -1,11 +1,13 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
+import TransitionOrb from './TransitionOrb';
 import Spline from '@splinetool/react-spline';
 import '../styles/Hero.css';
 
 export default function Hero() {
   return (
     <section className="hero">
+      <TransitionOrb />
       <div className="hero-text">
         <h1>
             <span role="img" aria-label="waving hand">👋</span>{' '}
