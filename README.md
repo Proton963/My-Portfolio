@@ -1,6 +1,5 @@
 # My-Portfolio
-
-![image](D:\pratham\Portfolio_webapp\my-portfolio\src\assets\My_Portfolio.png)
+<img width="1900" height="862" alt="Image" src="https://github.com/user-attachments/assets/e6aec653-9831-4eeb-9b2f-858956b6b23c" />
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
