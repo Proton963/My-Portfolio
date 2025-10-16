@@ -1,4 +1,7 @@
 import React from 'react';
+import LevelwiseRag from '../assets/Levelwise_RAG.png';
+import Project2 from '../assets/project2.jpg';
+import Project3 from '../assets/project3.jpg';
 
 const Projects = () => {
   const projects = [
@@ -6,7 +9,7 @@ const Projects = () => {
       id: 1,
       title: "Levelwise RAG Chatbot",
       description: "A RBAC chatbot application built with Python, Streamlit and MongoDB. Features include user authentication, role-based access control, and widget for file uploads.",
-      image: "src/assets/Levelwise_RAG (2).png",
+      image: LevelwiseRag,
       technologies: ["Python", "Streamlit", "MongoDB"],
       github: "https://github.com/Proton963/Levelwise_RAG_Chatbot.git",
       live: "",
@@ -16,7 +19,7 @@ const Projects = () => {
       id: 2,
       title: "Task Management App",
       description: "A responsive task management application with drag-and-drop functionality, real-time updates, and team collaboration features.",
-      image: "/assets/project2.jpg", 
+      image: Project2, 
       technologies: ["React", "Firebase", "Material-UI", "React DnD"],
       github: "https://github.com/yourusername/task-manager",
       live: "https://task-manager-demo.netlify.app",
@@ -26,7 +29,7 @@ const Projects = () => {
       id: 3,
       title: "Weather Dashboard",
       description: "A clean weather application that provides current conditions and forecasts using OpenWeather API with location-based services.",
-      image: "/assets/project3.jpg",
+      image: Project3,
       technologies: ["React", "OpenWeather API", "CSS3", "Chart.js"],
       github: "https://github.com/yourusername/weather-app",
       live: "https://weather-dashboard-demo.netlify.app",
