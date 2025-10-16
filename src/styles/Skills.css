@@ -1,0 +1,161 @@
+/* Skills Section */
+.skills {
+  padding: 5rem 0;
+  background: #000000;
+  color: #fff;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* card look: black interior, thin bright colored border, rounded corners */
+.skill-category {
+  background: #000; /* match page background so cards look inset */
+  padding: 3.2rem;
+  border-radius: 12px;
+  border: 3px solid transparent;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .15s ease;
+  min-height: 420px;
+}
+
+/* hover pop (keeps lift) */
+.skill-category:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+  color: #000; /* default hover text color (children use inherit) */
+}
+
+/* color variants (bright thin border, no colored glow) */
+.skill-category.color-blue {
+  border: 3px solid #2563eb;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+.skill-category.color-green {
+  border: 3px solid #00e676;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+.skill-category.color-orange {
+  border: 3px solid #ff7a00;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+/* fill with border color on hover, text goes black, keep neutral shadow (no glow) */
+.skill-category.color-blue:hover {
+  background: #2563eb;
+  border-color: #1e40af;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+}
+.skill-category.color-green:hover {
+  background: #00e676;
+  border-color: #00c853;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+}
+.skill-category.color-orange:hover {
+  background: #ff7a00;
+  border-color: #e65a00;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+}
+
+/* make headings/paragraphs inherit color so they go black on hover */
+.skill-category h3 {
+  margin: 0 0 1.2rem 0;
+  color: inherit;
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.skill-category p {
+  color: inherit;
+  opacity: 0.88;
+  font-size: 1.15rem;
+  margin-bottom: 2.2rem;
+  max-width: 36ch;
+}
+
+/* ensure images are visible and animate nicely */
+.tech-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: filter .18s ease, opacity .18s ease, transform .18s ease;
+  opacity: 1;
+  filter: none;
+}
+
+/* GitHub: convert black SVG to light (visible on black) */
+.tech-logo img.tint-github {
+  /* white-ish GitHub mark */
+  filter: invert(1) brightness(1.15) contrast(1);
+}
+
+/* Streamlit: tint to an accent color (orange/red) so it shows on black */
+/* adjust the filter values to tweak the exact hue */
+.tech-logo img.tint-streamlit {
+  filter: invert(35%) sepia(80%) saturate(700%) hue-rotate(335deg) brightness(0.95) contrast(1.02);
+}
+
+/* small hover scale for logos */
+.tech-logo img:hover {
+  transform: scale(1.06);
+}
+
+/* logos layout for Frontend card */
+.tech-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: auto; /* push logos to bottom like skill-list */
+  align-items: center;
+}
+.tech-logo {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 10px;
+  padding: 8px;
+}
+.tech-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: filter .18s ease, opacity .18s ease, transform .18s ease;
+  opacity: 1;
+  filter: none;
+}
+
+/* when card fills on hover (text becomes black), logos stay visible */
+.skill-category.color-blue:hover .tech-logo img,
+.skill-category.color-green:hover .tech-logo img,
+.skill-category.color-orange:hover .tech-logo img {
+  filter: none;
+  opacity: 1;
+}
+
+/* keep existing skill list visuals but reduce prominence */
+.skill-list { margin-top: 1rem; }
+.skill-item { margin-bottom: 1rem; }
+.skill-info { display:flex; justify-content:space-between; margin-bottom:0.5rem; }
+.skill-name { color: #cbd5e1; font-weight:700; }
+.skill-level { color: #94a3b8; font-size:0.9rem; }
+.skill-bar { height:6px; background:#0b0b0b; border-radius:3px; overflow:hidden; }
+.skill-progress { height:100%; background: linear-gradient(90deg, #2563eb, #3b82f6); border-radius:3px; transition: width 1s ease-out; }
+
+/* responsive tweak */
+@media (max-width: 980px) {
+  .skills-grid { grid-template-columns: 1fr; }
+  .skill-category h3 { font-size: 3.2rem; }
+}

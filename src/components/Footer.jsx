@@ -6,8 +6,8 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Your Name</h3>
-            <p>Full Stack Developer passionate about creating amazing web experiences.</p>
+            <h3>Pratham Nagvekar</h3>
+            <p>A Developer passionate about creating amazing AI web applications.</p>
             <div className="social-links">
               <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
                 LinkedIn
@@ -24,7 +24,7 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="#home">Home</a></li>
+              <li><a href="#Hero">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>

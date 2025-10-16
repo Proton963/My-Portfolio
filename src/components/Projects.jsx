@@ -4,12 +4,12 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-commerce Website",
-      description: "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.",
-      image: "/assets/project1.jpg",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-      github: "https://github.com/yourusername/ecommerce-app",
-      live: "https://ecommerce-demo.netlify.app",
+      title: "Levelwise RAG Chatbot",
+      description: "A RBAC chatbot application built with Python, Streamlit and MongoDB. Features include user authentication, role-based access control, and widget for file uploads.",
+      image: "src/assets/Levelwise_RAG (2).png",
+      technologies: ["Python", "Streamlit", "MongoDB"],
+      github: "https://github.com/Proton963/Levelwise_RAG_Chatbot.git",
+      live: "",
       featured: true
     },
     {

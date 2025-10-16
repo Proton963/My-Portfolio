@@ -7,16 +7,16 @@ const About = () => {
   const { scrollYProgress } = useScroll();
   
   // Change heading color when orb reaches it (around 0.6-0.7 scroll progress)
-  const headingColor = useTransform(
-    scrollYProgress, 
-    [0.24, 0.25], 
-    ['#ffffff', '#1052a4']
-  );
+  // const headingColor = useTransform(
+  //   scrollYProgress, 
+  //   [0.24, 0.25], 
+  //   ['#ffffff', '#114b93']
+  // );
   
   const headingGlow = useTransform(
     scrollYProgress,
     [0.20, 0.25],
-    ['none', '0 0 40px #1052a4, 0 0 40px #1052a4']
+    ['none', '0 0 40px #114b93, 0 0 40px #114b93']
   );
 
   return (
@@ -24,17 +24,16 @@ const About = () => {
       <div className="container">
         <div className="section-header">
           <motion.h2 className="about-heading"
-            style={{ 
-              // color: headingColor,
-              textShadow: headingGlow 
-            }}
-          >
+           style={{ textShadow: headingGlow }}>
             About Me
           </motion.h2>
           {/* <p>Get to know me better</p> */}
         </div>
         
         <div className="about-content">
+          <div className="about-image">
+            <img src="src\assets\Character.png" alt="About me" />
+          </div>
           <div className="about-text">
             <h3>I'm a passionate developer who loves creating digital solutions</h3>
             <p>
@@ -50,20 +49,17 @@ const About = () => {
             
             <div className="personal-info">
               <div className="info-item">
-                <strong>Location:</strong> Your City, Country
+                <strong>Location:</strong> Thane, India
               </div>
               <div className="info-item">
-                <strong>Email:</strong> your.email@example.com
+                <strong>Email:</strong> pratham.d.nagvekar@gmail.com
               </div>
               <div className="info-item">
-                <strong>Languages:</strong> English, Hindi
+                <strong>Languages:</strong> English, Hindi, Marathi
               </div>
             </div>
           </div>
           
-          <div className="about-image">
-            <img src="/assets/about-photo.jpg" alt="About me" />
-          </div>
         </div>
       </div>
     </section>

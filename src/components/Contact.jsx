@@ -42,15 +42,15 @@ const Contact = () => {
             <div className="contact-methods">
               <div className="contact-item">
                 <strong>Email:</strong>
-                <a href="mailto:your.email@example.com">your.email@example.com</a>
+                <a href="mailto:pratham.d.nagvekar@gmail.com">pratham.d.nagvekar@gmail.com</a>
               </div>
               <div className="contact-item">
                 <strong>Location:</strong>
-                <span>Your City, Country</span>
+                <span>Thane, India</span>
               </div>
               <div className="contact-item">
                 <strong>Phone:</strong>
-                <a href="tel:+1234567890">+1 (234) 567-8900</a>
+                <a href="tel:+912345678900">+91 7715077510</a>
               </div>
             </div>
             
@@ -60,9 +60,6 @@ const Contact = () => {
               </a>
               <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
                 GitHub
-              </a>
-              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
-                Twitter
               </a>
             </div>
           </div>
