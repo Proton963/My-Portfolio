@@ -1,5 +1,5 @@
 import React from 'react';
-import LevelwiseRag from '../assets/Levelwise_RAG(2).png';
+import LevelwiseRag from '../assets/Levelwise_RAG.png';
 import Project2 from '../assets/project2.jpg';
 import Project3 from '../assets/project3.jpg';
 
