@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/CustomCursor.css';
 
-const HOVERABLE_SELECTORS = 'button, a, [role="button"], .hoverable';
+const HOVERABLE_SELECTORS = 'button, a, input, textarea, select, [role="button"], .hoverable, .tech-badge, .action-btn, .pill-btn, .icon-btn, .project-image, .project-image img, .tech-logo img';
 
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: -100, y: -100 });

@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center; 
   position: absolute;
-  top: -60%;           /* Moves the glow up so half is hidden */
+  top: -60%;           
   left: 12%;
   width: 80vw;    
   height: 80vh; 
@@ -20,7 +20,7 @@
   .transition-orb { 
     left: 20%;
     transform: translateX(-50%);
-    width: 60vw; /* Adjust size for smaller screens */
-    height: 60vh; /* Adjust size for smaller screens */
+    width: 60vw; 
+    height: 60vh; 
   }
 }

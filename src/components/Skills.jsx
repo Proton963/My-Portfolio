@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import '../styles/Skills.css';
 
 const Skills = () => {
@@ -23,54 +24,132 @@ const Skills = () => {
     ],
     "Tools & Others": [
       { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", alt: "Git" },
-      // make GitHub visible on dark bg by tinting it via CSS class
-      { src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg", alt: "GitHub", cls: "tint-github" },
-      // use raw githubusercontent path for AWS (fixes some CDN issues)
-      { src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original.svg", alt: "AWS" },
-      // tint Streamlit to a distinct color via CSS class
-      { src: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/streamlit.svg", alt: "Streamlit", cls: "tint-streamlit" }
+      // Use devicon's GitHub logo with white variant
+      { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", alt: "GitHub", cls: "tint-github" },
+      // Use official AWS logo from simpleicons
+      { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg", alt: "AWS", cls: "aws-logo" },
+      // Use Streamlit from simpleicons with orange color
+      { src: "https://cdn.simpleicons.org/streamlit/FF4B4B", alt: "Streamlit", cls: "streamlit-logo" }
     ]
   };
 
   const colorClasses = ['color-blue', 'color-green', 'color-orange'];
 
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const headingVariants = {
+    hidden: { opacity: 0, y: -30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const logoVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.4
+      }
+    }
+  };
+
   return (
     <section id="skills" className="skills">
       <div className="container">
-        <div className="section-header">
-          <h2>My Skills</h2>
-          <p>Technologies I work with</p>
-        </div>
+        <motion.div 
+          className="section-header"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+          variants={containerVariants}
+        >
+          <motion.h2 variants={headingVariants}>My Skills</motion.h2>
+          <motion.p 
+            variants={headingVariants}
+            transition={{ delay: 0.2 }}
+          >
+            Technologies I work with
+          </motion.p>
+        </motion.div>
 
-        <div className="skills-grid">
+        <motion.div 
+          className="skills-grid"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          variants={containerVariants}
+        >
           {skillCategories.map((category, index) => {
             const title = category.title;
             const logosFor = logos[title];
 
             return (
-              <div
+              <motion.div
                 key={index}
                 className={`skill-category ${colorClasses[index % colorClasses.length]}`}
+                variants={cardVariants}
               >
                 <h3>{title}</h3>
 
                 {logosFor ? (
-                  <div className="tech-logos" aria-hidden={false}>
+                  <motion.div 
+                    className="tech-logos" 
+                    aria-hidden={false}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.5 }}
+                    variants={containerVariants}
+                  >
                     {logosFor.map((logo, i) => (
-                      <div className="tech-logo" key={i}>
+                      <motion.div 
+                        className="tech-logo" 
+                        key={i}
+                        variants={logoVariants}
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      >
                         <img src={logo.src} alt={logo.alt} className={logo.cls || ''} />
-                      </div>
+                      </motion.div>
                     ))}
-                  </div>
+                  </motion.div>
                 ) : (
                   <div className="skill-list" style={{ marginTop: 'auto' }}>
                     <p style={{ color: 'inherit' }}>No items</p>
                   </div>
                 )}
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
