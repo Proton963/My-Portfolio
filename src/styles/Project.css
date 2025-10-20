@@ -13,9 +13,16 @@
   font-weight: 900;
   text-align: center;
   color: #2563eb;
-  margin: 0 0 4rem 0;
+  margin: 1rem;
   letter-spacing: -0.02em;
   padding: 0 2rem;
+}
+
+ .subHeading {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #64748b;
+    line-height: 1.6;
 }
 
 /* Project Panel - Reduced height for better spacing */

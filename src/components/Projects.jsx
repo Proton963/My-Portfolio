@@ -111,6 +111,7 @@ const Projects = () => {
   return (
     <section id ="projects"  className="projects-showcase">
       <h2 className="projects-heading" ref={headingRef}>My Projects</h2>
+      <p className='subHeading'>Ideas turned into reality</p>
       
       {projects.map((project, index) => (
         <div

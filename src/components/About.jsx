@@ -63,6 +63,7 @@ const About = () => {
           >
             About Me
           </motion.h2>
+          <p>A brief intro</p>
         </div>
         
         <motion.div 
