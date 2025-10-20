@@ -22,21 +22,21 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Take My Tym",
-      tagline: "Redefined Freelance",
-      description: "Take My Tym is a robust freelance platform that empowers users to buy and sell skills based on availability. Built with Flutter and Firebase, leveraging Firebase, Stripe, and Google Maps, it offers real-time messaging, secure payments, and a user-friendly interface for both freelancers and clients.",
-      image: "https://via.placeholder.com/600x800/000000/3B82F6?text=Take+My+Tym",
-      technologies: ["Flutter", "Firebase", "Stripe", "Google Maps"],
+      title: "My Portfolio Website",
+      tagline: "Showcasing My Work",
+      description: "My Portfolio Website is a personal project that highlights my skills, experiences, and projects. Built with React Vite, it features a modern design, smooth animations, and a responsive layout.",
+      image: "src/assets/Portfolio.png",
+      technologies: ["React Vite", "JS", "CSS", "GSAP"],
       github: "https://github.com/yourusername/takemytym",
       live: ""
     },
     {
       id: 3,
-      title: "Task Management App",
-      tagline: "Productivity Reimagined",
-      description: "A responsive task management application with drag-and-drop functionality, real-time updates, and team collaboration features. Built with React and Firebase, featuring Material-UI components and React DnD for seamless task organization.",
-      image: "https://via.placeholder.com/600x800/000000/3B82F6?text=Task+Manager",
-      technologies: ["React", "Firebase", "Material-UI", "React DnD"],
+      title: "Athena RAG-Bot",
+      tagline: "Converts NLP queries to SQL",
+      description: "Athena RAG-Bot is a powerful tool that transforms natural language queries into SQL commands. Built with Python and Streamlit, it leverages advanced NLP techniques to understand user intent and generate accurate SQL queries.",
+      image: "src/assets/AthenaBot.png",
+      technologies: ["Python", "Groq", "Streamlit"],
       github: "https://github.com/yourusername/task-manager",
       live: ""
     }
