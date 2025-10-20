@@ -66,6 +66,10 @@ const Projects = () => {
     projectsRef.current.forEach((projectElement, index) => {
       if (!projectElement) return;
 
+      // Detect if mobile/tablet
+      const isMobile = window.innerWidth <= 768;
+      const startPoint = isMobile ? 'top 99%' : 'top 85%';
+
       const image = projectElement.querySelector('.project-image');
       const contentElements = projectElement.querySelectorAll('.project-content > *');
 
@@ -81,7 +85,7 @@ const Projects = () => {
           ease: 'power3.out',
           scrollTrigger: {
             trigger: projectElement,
-            start: 'top 85%',
+            start: startPoint,
             end: 'top 30%',
             toggleActions: 'play none none reverse'
           }
