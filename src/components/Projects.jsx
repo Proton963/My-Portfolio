@@ -27,7 +27,7 @@ const Projects = () => {
       description: "My Portfolio Website is a personal project that highlights my skills, experiences, and projects. Built with React Vite, it features a modern design, smooth animations, and a responsive layout.",
       image: "src/assets/Portfolio.png",
       technologies: ["React Vite", "JS", "CSS", "GSAP"],
-      github: "https://github.com/yourusername/takemytym",
+      github: "https://github.com/Proton963/My-Portfolio.git",
       live: ""
     },
     {
@@ -37,7 +37,7 @@ const Projects = () => {
       description: "Athena RAG-Bot is a powerful tool that transforms natural language queries into SQL commands. Built with Python and Streamlit, it leverages advanced NLP techniques to understand user intent and generate accurate SQL queries.",
       image: "src/assets/AthenaBot.png",
       technologies: ["Python", "Groq", "Streamlit"],
-      github: "https://github.com/yourusername/task-manager",
+      github: "https://github.com/Proton963/Athena_Assist_Bot.git",
       live: ""
     }
   ];

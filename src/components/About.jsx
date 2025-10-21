@@ -82,19 +82,21 @@ const About = () => {
           
           <div className="about-text">
             <motion.h3 variants={textVariants}>
-              I'm a passionate developer who loves creating digital solutions
+              I'm an aspiring data scientist who loves turning data into meaningful insights
             </motion.h3>
             
             <motion.p variants={textVariants}>
-              With over 3 years of experience in web development, I specialize in 
-              creating modern, responsive applications using React, Node.js, and other 
-              cutting-edge technologies.
+              With a Bachelor’s degree in Artificial Intelligence and Data Science 
+              (Honors in Cybersecurity), I’m currently pursuing a Data Science internship where 
+              I apply my skills in Python, AI, and analytics to solve real-world challenges. 
+              I enjoy exploring how intelligent systems can make technology smarter and more 
+              human-centered.
             </motion.p>
             
             <motion.p variants={textVariants}>
-              When I'm not coding, you can find me exploring new technologies, 
-              contributing to open source projects, or sharing my knowledge through 
-              blog posts and tutorials.
+              When I’m not analyzing data, you’ll find me singing, drawing, 
+              or diving into new tech trends — always driven by curiosity and 
+              a desire to keep learning and creating.
             </motion.p>
             
             <motion.div 
