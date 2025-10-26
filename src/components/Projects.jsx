@@ -38,7 +38,7 @@ const Projects = () => {
       image: "src/assets/AthenaBot.png",
       technologies: ["Python", "Groq", "Streamlit"],
       github: "https://github.com/Proton963/Athena_Assist_Bot.git",
-      live: ""
+      live: "https://proton-athena-bot.streamlit.app/"
     }
   ];
 

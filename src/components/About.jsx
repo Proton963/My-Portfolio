@@ -1,18 +1,9 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import TransitionOrb from './TransitionOrb';
+import { motion } from 'framer-motion';
 import '../styles/About.css';
 import CharacterImg from '../assets/Character.png';
 
 const About = () => {
-  const { scrollYProgress } = useScroll();
-  
-  const headingGlow = useTransform(
-    scrollYProgress,
-    [0.15, 0.21],
-    ['none', '0 0 40px #114b93, 0 0 40px #114b93']
-  );
-
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -55,7 +46,6 @@ const About = () => {
         <div className="section-header">
           <motion.h2 
             className="about-heading"
-            style={{ textShadow: headingGlow }}
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
@@ -86,15 +76,15 @@ const About = () => {
             </motion.h3>
             
             <motion.p variants={textVariants}>
-              With a Bachelor’s degree in Artificial Intelligence and Data Science 
-              (Honors in Cybersecurity), I’m currently pursuing a Data Science internship where 
+              With a Bachelor's degree in Artificial Intelligence and Data Science 
+              (Honors in Cybersecurity), I'm currently pursuing a Data Science internship where 
               I apply my skills in Python, AI, and analytics to solve real-world challenges. 
               I enjoy exploring how intelligent systems can make technology smarter and more 
               human-centered.
             </motion.p>
             
             <motion.p variants={textVariants}>
-              When I’m not analyzing data, you’ll find me singing, drawing, 
+              When I'm not analyzing data, you'll find me singing, drawing, 
               or diving into new tech trends — always driven by curiosity and 
               a desire to keep learning and creating.
             </motion.p>
