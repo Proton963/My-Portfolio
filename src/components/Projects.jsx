@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../styles/Project.css';
+import Levelwise from '../assets/levelwise_rag.png';
+import Portfolio from '../assets/portfolio.png';
+import AthenaBot from '../assets/athenabot.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,7 +18,7 @@ const Projects = () => {
       title: "Levelwise RAG Chatbot",
       tagline: "Intelligent Conversations",
       description: "A RBAC chatbot application built with Python, Streamlit and MongoDB. Features include user authentication, role-based access control, and widget for file uploads. Uses advanced RAG (Retrieval-Augmented Generation) for context-aware responses.",
-      image: "src/assets/Levelwise_RAG.png",
+      image: Levelwise,
       technologies: ["Python", "Streamlit", "MongoDB", "LangChain"],
       github: "https://github.com/Proton963/Levelwise_RAG_Chatbot.git",
       live: ""
@@ -25,7 +28,7 @@ const Projects = () => {
       title: "My Portfolio Website",
       tagline: "Showcasing My Work",
       description: "My Portfolio Website is a personal project that highlights my skills, experiences, and projects. Built with React Vite, it features a modern design, smooth animations, and a responsive layout.",
-      image: "src/assets/Portfolio.png",
+      image: Portfolio,
       technologies: ["React Vite", "JS", "CSS", "GSAP"],
       github: "https://github.com/Proton963/My-Portfolio.git",
       live: ""
@@ -35,7 +38,7 @@ const Projects = () => {
       title: "Athena RAG-Bot",
       tagline: "Converts NLP queries to SQL",
       description: "Athena RAG-Bot is a powerful tool that transforms natural language queries into SQL commands. Built with Python and Streamlit, it leverages advanced NLP techniques to understand user intent and generate accurate SQL queries.",
-      image: "src/assets/AthenaBot.png",
+      image: AthenaBot,
       technologies: ["Python", "Groq", "Streamlit"],
       github: "https://github.com/Proton963/Athena_Assist_Bot.git",
       live: "https://proton-athena-bot.streamlit.app/"

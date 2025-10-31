@@ -15,9 +15,15 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 468px) {
+  .transition-orb {
+    display: none !important;
+  }
+}
+
 @media (max-width: 720px) {
   .transition-orb {
-    top: -30%;
+    top: -60%;
     width: 80vw;
     height: 80vh;
   }
@@ -25,7 +31,8 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .transition-orb {
-    top: -50%;
+    top: -60%;
+    left: 7%;
     width: 90vw;
     height: 90vh;
   }

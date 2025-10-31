@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import '../styles/About.css';
-import CharacterImg from '../assets/Character.png';
+import CharacterImg from '../assets/character.png';
 
 const About = () => {
   // Animation variants

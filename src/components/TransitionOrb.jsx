@@ -90,7 +90,7 @@ export default function TransitionOrb() {
         const projectsProgress = (scrollY - projectsFadeInStart) / Math.max(1, (projectsEndScroll - projectsFadeInStart));
         scale = 0.03 + projectsProgress * 0.10;
         const eased = 1 - Math.pow(1 - projectsProgress, 2);
-        opacity = Math.min(1, eased);
+        opacity = Math.min(1, eased);  // Orb is visible during this range
         y = targetY + eased * (projectsTopFromTop - aboutTopFromTop) * 0.001;
       }
 
