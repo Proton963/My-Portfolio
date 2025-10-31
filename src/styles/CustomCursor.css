@@ -27,7 +27,8 @@
   border-width: 3px;
 }
 @media (max-width: 468px) {
-  .transition-orb {
+  .cursor-dot,
+  .cursor-ring {
     display: none !important;
   }
 }
