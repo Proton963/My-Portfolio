@@ -26,3 +26,8 @@
   height: 60px;
   border-width: 3px;
 }
+@media (max-width: 468px) {
+  .transition-orb {
+    display: none !important;
+  }
+}
