@@ -120,6 +120,7 @@
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .btn-resume i {
@@ -132,6 +133,8 @@
   background-color: #114b93;
   color: white;
   outline: none;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
 }
 
 .social-btn {
@@ -146,6 +149,7 @@
   font-size: 2rem;
   background: transparent;
   transition: background 0.2s, border 0.2s, color 0.2s;
+  transition: all 0.3s ease;
   box-shadow: 0 0 0 0 #114b93 inset;
 }
 
@@ -156,6 +160,8 @@
   border-color: #114b93;
   box-shadow: 0 0 16px 2px #114b9360 inset;
   outline: none;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
 }
 
 /* button:focus,

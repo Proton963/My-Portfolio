@@ -2,7 +2,7 @@
 .projects-showcase {
   background: #000000;
   color: #ffffff;
-  overflow-x: hidden;
+  overflow: visible;
   padding-top: 4rem;
 }
 
