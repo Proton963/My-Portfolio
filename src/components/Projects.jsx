@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState} from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../styles/Project.css';
@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Projects = () => {
   const projectsRef = useRef([]);
   const headingRef = useRef(null);
+  const [selectedProject, setSelectedProject] = useState(null);
   
   const projects = [
     {
@@ -31,7 +32,7 @@ const Projects = () => {
       image: Portfolio,
       technologies: ["React Vite", "JS", "CSS", "GSAP"],
       github: "https://github.com/Proton963/My-Portfolio.git",
-      live: ""
+      live: "href = #"
     },
     {
       id: 3,
@@ -116,7 +117,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id ="projects"  className="projects-showcase">
+    <section id ="projects" className="projects-showcase">
       <h2 className="projects-heading" ref={headingRef}>My Projects</h2>
       <p className='subHeading'>Ideas turned into reality</p>
       
@@ -176,7 +177,7 @@ const Projects = () => {
                       </svg>
                     </a>
                   )}
-                  <a href="#" className="action-btn pill-btn">
+                  <a className="action-btn pill-btn" onClick={() => setSelectedProject(project)}>
                     Know More...
                   </a>
                 </div>
@@ -185,6 +186,19 @@ const Projects = () => {
           </div>
         </div>
       ))}
+
+      {selectedProject && (
+        <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h3>{selectedProject.title}</h3>
+              <button onClick={() => setSelectedProject(null)}>✕</button>
+            </div>
+            <p>{selectedProject.description}</p>
+          </div>
+        </div>
+      )}
+
     </section>
   );
 };

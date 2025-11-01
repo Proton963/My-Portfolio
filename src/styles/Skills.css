@@ -47,6 +47,7 @@
   justify-content: flex-start;
   transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .15s ease;
   min-height: 420px;
+  z-index: 1; /* ensure cards are above background */
 }
 
 /* hover pop (keeps lift) */
