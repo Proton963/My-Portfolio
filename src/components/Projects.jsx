@@ -32,7 +32,7 @@ const Projects = () => {
       image: Portfolio,
       technologies: ["React Vite", "JS", "CSS", "GSAP"],
       github: "https://github.com/Proton963/My-Portfolio.git",
-      live: "href = #"
+      live: "https://my-portfolio-proton.vercel.app/"
     },
     {
       id: 3,
